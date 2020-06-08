@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>367</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>22</y>
+     <width>361</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>浏览文件</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QToolButton" name="toolButton">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="filename_LineEdit">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>129</x>
+     <y>112</y>
+     <width>108</width>
+     <height>143</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="statistics_btn">
+        <property name="text">
+         <string>开始统计文件数据</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="save_btn">
+        <property name="text">
+         <string>开始导入保存数据</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="analyze_btn">
+        <property name="text">
+         <string>开始导出文件数据</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>导出到云端</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="draw_btn">
+      <property name="text">
+       <string>开始作图</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>37</x>
+     <y>70</y>
+     <width>294</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>输入数据库名</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="database_name_LineEdit"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="creat_database_btn">
+      <property name="text">
+       <string>创建数据库</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>253</x>
+     <y>211</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+font: 11pt &quot;楷体&quot;;
+
+text-decoration: underline;</string>
+   </property>
+   <property name="text">
+    <string>By Leus DD OC</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>toolButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>browse_files()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>115</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>statistics_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>statistics_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>analyze_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>analyze_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>save_data()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>draw_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>paint_draw()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>creat_database_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>create_database()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>database_name_LineEdit</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>get_dbname()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>save_cloud()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>browse_files()</slot>
+  <slot>analyze_file()</slot>
+  <slot>statistics_file()</slot>
+  <slot>save_data()</slot>
+  <slot>paint_draw()</slot>
+  <slot>create_database()</slot>
+  <slot>get_dbname()</slot>
+  <slot>save_cloud()</slot>
+ </slots>
+</ui>
